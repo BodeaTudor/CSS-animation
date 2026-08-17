@@ -1,0 +1,12 @@
+Animation fill mode is used to tell CSS what to do with a specific element that is being animated outside the
+animation window, i.e. before or after.
+It can take four values:
+1. none      - the default, it returns the element to its original state
+2. forwards  - it applies the last properties i.e. the 'to' property of the keyframe, at the end of the animation
+             - in other words the element keeps the properties at the end of animation, for example if it was moved from
+               0 to 700px, it won't jump back to 0px, it will remain at 700px.
+3. backwards - if an element has a position of 0px, and the animation moves it starting from 200px to 700px, when 'backwards'
+               is not used, the element will 'teleport' to 200px. If 'backwards' is used, the element will have the position
+               of 200px right at the start i.e. when the page is visited (or refreshed), it will play the animation, and
+               only after the animation ends, it will go back to the initial position of 0px.
+4. both      - applies both forwards and backwards to the animation
