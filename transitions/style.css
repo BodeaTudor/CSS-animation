@@ -1,0 +1,22 @@
+body {
+    background: lightblue;
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    padding: 50px 0;
+    margin: 60px auto;
+    background: pink;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    line-height: 0;
+    /* always the first number supplied i.e. transform 0.3s, is the transition time and the second number is the delay*/
+    transition: background-color 1s, transform 1s 1s ease-in /* the last parameter is named the timing function */;
+}
+
+.circle:hover {
+    background-color: salmon;
+    transform: rotate(360deg);
+}
