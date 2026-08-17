@@ -50,6 +50,7 @@ html, body {
     animation-fill-mode: both;
     /*animation-delay: 2s;*/
     animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0, .77, 1, .28);
 }
 
 .luigi {
@@ -61,6 +62,7 @@ html, body {
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-direction: reverse;
+    animation-timing-function: linear;
 }
 
 /*// KEYFRAMES //*/
@@ -70,7 +72,7 @@ html, body {
     }
 
     to {
-        transform: translateX(calc(100vw + 500px));
+        transform: translateX(calc(100vw));
     }
 }
 
