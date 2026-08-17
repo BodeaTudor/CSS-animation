@@ -1,0 +1,32 @@
+body {
+    background: lightblue;
+    text-align: center;
+}
+
+/* translate */
+/*img {*/
+    /*transform: translateX(200px);*/ /* left-right */
+    /*transform: translateX(-200px);*/
+    /*transform: translateY(200px);*/ /* up-down */
+    /*transform: translate(200px, 400px); !* used for both the X and Y axes *!*/
+/*}*/
+
+/* scale */
+/*img {*/
+    /*transform: scaleX(3); !* value 1 will not apply *!*/
+    /*transform: scaleY(3);*/
+    /*transform: scale(3, 0.5);*/
+/*}*/
+
+/* rotate */
+/*img {*/
+    /*transform: rotateX(180deg);*/
+    /*transform: rotateY(60deg);*/
+    /*transform: rotateZ(50deg);*/
+/*}*/
+
+/* chained together */
+img {
+    transform: rotateZ(-60deg) translateY(200px) scale(2);
+}
+
