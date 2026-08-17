@@ -1,0 +1,9 @@
+The animation timing function determines the rate at which the element that is being animated goes from
+point A to point B.
+The default value is 'ease', the behavior is as follows: start slow -> speed up in the middle -> end slowly.
+The 'linear' value is keeping the animation constant throughout the whole cycle.
+The 'ease-in' value behaves the same as 'ease' but it only starts slow, it speeds up in the middle, and it doesn't slow at the end.
+The 'ease-out' value behaves the same as 'ease' but it starts at a normal speed, and it slows down just towards the end.
+The 'ease-in-out' value is almost the same as 'ease' but, it starts very slow, it speeds up smoothly in the middle and, at
+the end it slows down more smoothly than the 'ease' animation.
+A custom timing function can be used with the 'cubic-bezier' function. Reference: 'cubic-bezier.com'.
