@@ -50,7 +50,8 @@ html, body {
     animation-fill-mode: both;
     /*animation-delay: 2s;*/
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0, .77, 1, .28);
+    /*animation-timing-function: cubic-bezier(0, .77, 1, .28);*/
+    animation-timing-function: linear;
 }
 
 .luigi {
@@ -61,8 +62,24 @@ html, body {
     animation-duration: 5s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
-    animation-direction: reverse;
     animation-timing-function: linear;
+}
+
+.cloud {
+    position: absolute;
+}
+
+.cloud:nth-child(1) {
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+    width: 300px;
+    top: 0;
+    animation: wind 50s linear infinite reverse;
 }
 
 /*// KEYFRAMES //*/
@@ -72,11 +89,16 @@ html, body {
     }
 
     to {
-        transform: translateX(calc(100vw));
+        transform: translateX(100vw);
     }
 }
 
+@keyframes wind {
+    from {
+        left: -100%;
+    }
 
-
-
-
+    to {
+        left: 100vw;
+    }
+}
