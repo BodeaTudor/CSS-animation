@@ -1,0 +1,5 @@
+The animation direction is useful for reusing already existing animations and has 4 states:
+alternate         - the animation is being played normal and then in reverse, i.e. from -> to - to -> from etc.
+alternate-reverse - same as alternate but the animations starts in reverse, i.e. to -> from - from -> to etc.
+normal            - the default value
+reverse           - the animation is being played in reverse i.e. from 'to' to 'from'
