@@ -44,25 +44,30 @@ html, body {
     position: absolute;
     top: -40px;
     left: 0;
-    animation-name: drive;
-    animation-duration: 3s;
+    animation-name: drive, jump-mario;
+    animation-duration: 3s, 0.3s;
+    animation-delay: 0s, 1.2s;
     /* animation fill mode */
     animation-fill-mode: both;
     /*animation-delay: 2s;*/
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite, 1;
     /*animation-timing-function: cubic-bezier(0, .77, 1, .28);*/
-    animation-timing-function: linear;
+    animation-timing-function: linear, ease;
 }
 
 .luigi {
     position: absolute;
     top: 100px;
     left: 0;
-    animation-name: drive;
-    animation-duration: 5s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    /*animation-name: drive;*/
+    /*animation-duration: 5s;*/
+    /*animation-fill-mode: both;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-timing-function: linear;*/
+
+    /* chaining functions and animation shorthand combined */
+    animation: drive 5s both infinite linear,
+    jump-luigi 0.3s 2s 2 ease;
 }
 
 .cloud {
@@ -100,5 +105,34 @@ html, body {
 
     to {
         left: 100vw;
+    }
+}
+
+@keyframes jump-mario {
+    /* when there are more than 2 states i.e. more than 'from' and 'to' we use percentages */
+    0% {
+        top: -40px;
+    }
+
+    50% {
+        top: -100px
+    }
+
+    100% {
+        top: -40px;
+    }
+}
+
+@keyframes jump-luigi {
+    0% {
+        top: 100px;
+    }
+
+    50% {
+        top: 0;
+    }
+
+    100% {
+        top: 100px;
     }
 }
